@@ -11,7 +11,7 @@
 | [server](https://github.com/filescodebox/server) | 独立部署应用 | 薄壳入口 + 前端静态资源 + Dockerfile,自托管标准形态 |
 | [frontend](https://github.com/filescodebox/frontend) | Web 前端 | Vue3 + TS + Vite + Element Plus,API 类型由 openapi.json 自动生成 |
 | [filecodebox-fnos](https://github.com/filescodebox/filecodebox-fnos) | 飞牛 fnOS 应用 | 单容器库式复用 core,接入飞牛 SSO/共享目录/通知/内网穿透 |
-| [FileCodeBox](https://github.com/filescodebox/FileCodeBox) | 历史存档(镜像) | 拆分前的单仓库版本,保留完整历史 |
+| [FileCodeBox](https://github.com/filescodebox/FileCodeBox) | 装配仓(umbrella) | 入口仓库:`make setup` 一键拉齐全部模块并统一构建/测试/部署;拆分前完整版本在 legacy 分支 |
 
 ## 依赖方向
 
@@ -26,6 +26,10 @@ fnos ─────┘
 ## 快速开始
 
 ```bash
+git clone https://github.com/filescodebox/FileCodeBox.git && cd FileCodeBox
+make setup && make smoke   # 一键拉齐模块 + 冒烟
+
+# 或纯 Docker:
 docker run -d -p 12345:12345 \
   -e FCB_JWT_SECRET=$(openssl rand -hex 32) \
   ghcr.io/filescodebox/server:latest
