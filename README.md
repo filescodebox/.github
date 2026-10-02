@@ -23,6 +23,8 @@ fnos ─────┘
 
 单向依赖,CI 强制守护(contracts 零项目内依赖;core 不依赖任何下游)。
 
+📐 **[完整架构图集](https://github.com/filescodebox/FileCodeBox/blob/main/docs/architecture.md)**:生态全景 / 仓库依赖 / core 分层 / 请求流 / 数据流 / 部署形态 / 发布流水线。
+
 ## 快速开始
 
 ```bash
