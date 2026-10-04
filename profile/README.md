@@ -37,7 +37,7 @@
 | [desktop](https://github.com/filescodebox/desktop) | 🖥️ 桌面客户端：Tauri 2 托盘常驻，三平台安装包 | [![tag](https://img.shields.io/github/v/tag/filescodebox/desktop)](https://github.com/filescodebox/desktop/tags) |
 | [fnos](https://github.com/filescodebox/fnos) | 🐂 飞牛 fnOS 应用：fnpack 标准包，数据落 NAS 共享目录 | [![tag](https://img.shields.io/github/v/tag/filescodebox/fnos)](https://github.com/filescodebox/fnos/tags) |
 | [p2p](https://github.com/filescodebox/p2p) | 🕸️ P2P 联邦注册中心：节点租约注册 + 口令联邦路由 | [![tag](https://img.shields.io/github/v/tag/filescodebox/p2p)](https://github.com/filescodebox/p2p/tags) |
-| [kit](https://github.com/filescodebox/kit) | 🧰 共享 Go 工具库：24 个零生态依赖通用包（retry/syncx/singleflight/group 等） | [![tag](https://img.shields.io/github/v/tag/filescodebox/kit)](https://github.com/filescodebox/kit/tags) |
+| [kit](https://github.com/filescodebox/kit) | 🧰 共享 Go 工具库：28 个零生态依赖通用包（retry/syncx/shutdown/workflow 等） | [![tag](https://img.shields.io/github/v/tag/filescodebox/kit)](https://github.com/filescodebox/kit/tags) |
 | [charts](https://github.com/filescodebox/charts) | ☸️ Kubernetes Helm Chart：Pages + OCI 双发布 | [![tag](https://img.shields.io/github/v/tag/filescodebox/charts)](https://github.com/filescodebox/charts/tags) |
 
 ### 依赖方向（单向，CI 强制守护）
