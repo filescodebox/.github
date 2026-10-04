@@ -1,6 +1,6 @@
-# FileCodeBox 生态
+# FilesCodeBox 生态
 
-高性能文件/文本匿名分享平台(Go + Hertz + GORM 后端,Vue3 前端),按角色拆分的多仓库结构。
+高性能文件/文本匿名分享平台(文件快递柜;Go + Hertz + GORM 后端,Vue3 前端),按角色拆分的多仓库结构。
 
 ## 仓库导航
 
@@ -8,10 +8,12 @@
 |------|------|------|
 | [contracts](https://github.com/filescodebox/contracts) | 契约层 | 统一错误码 + Thrift 生成类型,纯类型零业务依赖,所有实现方的单一真相源 |
 | [core](https://github.com/filescodebox/core) | 业务核心库 | 10 个域服务 + repo/storage + bootstrap 库入口,`Bootstrap()` 一次调用拉起全部业务 |
-| [server](https://github.com/filescodebox/server) | 独立部署应用 | 薄壳入口 + 前端静态资源 + Dockerfile,自托管标准形态 |
-| [frontend](https://github.com/filescodebox/frontend) | Web 前端 | Vue3 + TS + Vite + Element Plus,API 类型由 openapi.json 自动生成 |
-| [filecodebox-fnos](https://github.com/filescodebox/filecodebox-fnos) | 飞牛 fnOS 应用 | 单容器库式复用 core,接入飞牛 SSO/共享目录/通知/内网穿透 |
-| [FileCodeBox](https://github.com/filescodebox/FileCodeBox) | 装配仓(umbrella) | 入口仓库:`make setup` 一键拉齐全部模块并统一构建/测试/部署;拆分前完整版本在 legacy 分支 |
+| [server](https://github.com/filescodebox/server) | 独立部署应用 | 薄壳入口 + Dockerfile,自托管标准形态(纯后端镜像,前端分离部署) |
+| [frontend](https://github.com/filescodebox/frontend) | Web 前端 | Vue3 + TS + Vite + Element Plus,API 规范由后端运行时生成(/openapi.json) |
+| [desktop](https://github.com/filescodebox/desktop) | 桌面客户端 | Tauri 2,托盘常驻连接你的文件快递柜,三平台安装包 |
+| [fnos](https://github.com/filescodebox/fnos) | 飞牛 fnOS 应用 | 单容器库式复用 core,fnpack 标准应用包,数据落 NAS 共享目录 |
+| [charts](https://github.com/filescodebox/charts) | Kubernetes Helm Charts | filecodebox chart(前后端分离两 Deployment),Pages + OCI 双发布 |
+| [filescodebox](https://github.com/filescodebox/filescodebox) | 装配仓(umbrella) | 入口仓库:`make setup` 一键拉齐全部模块并统一构建/测试/部署;拆分前完整版本在 legacy 分支 |
 
 ## 依赖方向
 
@@ -23,12 +25,12 @@ fnos ─────┘
 
 单向依赖,CI 强制守护(contracts 零项目内依赖;core 不依赖任何下游)。
 
-📐 **[完整架构图集](https://github.com/filescodebox/FileCodeBox/blob/main/docs/architecture.md)**:生态全景 / 仓库依赖 / core 分层 / 请求流 / 数据流 / 部署形态 / 发布流水线。
+📐 **[完整架构图集](https://github.com/filescodebox/filescodebox/blob/main/docs/architecture.md)**:生态全景 / 仓库依赖 / core 分层 / 请求流 / 数据流 / 部署形态 / 发布流水线。
 
 ## 快速开始
 
 ```bash
-git clone https://github.com/filescodebox/FileCodeBox.git && cd FileCodeBox
+git clone https://github.com/filescodebox/filescodebox.git && cd filescodebox
 make setup && make smoke   # 一键拉齐模块 + 冒烟
 
 # 或纯 Docker:
