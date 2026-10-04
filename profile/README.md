@@ -38,8 +38,6 @@
 | [fnos](https://github.com/filescodebox/fnos) | 🐂 飞牛 fnOS 应用：fnpack 标准包，数据落 NAS 共享目录 | [![tag](https://img.shields.io/github/v/tag/filescodebox/fnos)](https://github.com/filescodebox/fnos/tags) |
 | [p2p](https://github.com/filescodebox/p2p) | 🕸️ P2P 联邦注册中心：节点租约注册 + 口令联邦路由 | [![tag](https://img.shields.io/github/v/tag/filescodebox/p2p)](https://github.com/filescodebox/p2p/tags) |
 | [kit](https://github.com/filescodebox/kit) | 🧰 共享 Go 工具库：20 个零生态依赖通用包（retry/syncx/ratelimit 等） | [![tag](https://img.shields.io/github/v/tag/filescodebox/kit)](https://github.com/filescodebox/kit/tags) |
-| [p2p](https://github.com/filescodebox/p2p) | 🕸️ P2P 联邦注册中心：节点租约注册 + 口令联邦路由 | [![tag](https://img.shields.io/github/v/tag/filescodebox/p2p)](https://github.com/filescodebox/p2p/tags) |
-| [kit](https://github.com/filescodebox/kit) | 🧰 共享 Go 工具库：20 个零生态依赖通用包（retry/syncx/ratelimit 等） | [![tag](https://img.shields.io/github/v/tag/filescodebox/kit)](https://github.com/filescodebox/kit/tags) |
 | [charts](https://github.com/filescodebox/charts) | ☸️ Kubernetes Helm Chart：Pages + OCI 双发布 | [![tag](https://img.shields.io/github/v/tag/filescodebox/charts)](https://github.com/filescodebox/charts/tags) |
 
 ### 依赖方向（单向，CI 强制守护）
@@ -56,10 +54,6 @@ graph LR
     kit["🧰 kit<br/>共享 Go 工具库"]
     core -.->|"按需接入"| kit
     p2p["🕸️ p2p<br/>联邦注册中心"]
-    core -. HTTP .-> p2p
-    kit["🧰 kit<br/>共享 Go 工具库"]
-    core -.->|"按需接入"| kit
-```
 
 📐 生态全景 / core 分层 / 请求流 / 数据流 / 部署形态 / 发布流水线，见 **[架构图集](https://github.com/filescodebox/filescodebox/blob/main/docs/architecture.md)**。
 
