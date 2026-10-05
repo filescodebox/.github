@@ -53,7 +53,7 @@ graph LR
     core -. HTTP .-> p2p
     kit["🧰 kit<br/>共享 Go 工具库"]
     core -.->|"按需接入"| kit
-    p2p["🕸️ p2p<br/>联邦注册中心"]
+```
 
 📐 生态全景 / core 分层 / 请求流 / 数据流 / 部署形态 / 发布流水线，见 **[架构图集](https://github.com/filescodebox/filescodebox/blob/main/docs/architecture.md)**。
 
