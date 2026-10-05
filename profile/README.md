@@ -23,7 +23,8 @@
 - 🧩 **契约先行** — Thrift IDL 单一真相源 + 统一错误码；API 规范由后端运行时生成（`/openapi.json`）
 - 🚀 **多种交付形态** — Docker / docker-compose、Kubernetes（Helm Chart）、桌面客户端（Tauri 2 托盘常驻）、飞牛 fnOS 应用包
 - 📊 **开箱可观测** — Prometheus `/metrics` 默认开启，OpenTelemetry 链路追踪可选
-- 🛡️ **治理内建** — API Token、上传类型/大小/频控、管理端站点配置（存库持久化，重启不丢）
+- 🛡️ **治理内建** — API Token、上传类型/大小/频控、内容审核钩子、管理端站点配置（存库持久化，重启不丢）
+- 🕸️ **P2P 联邦 & 设备直传（可选）** — 多节点联邦互认取件；桌面客户端 p2pc 端到端加密直传；MCP 端点供 AI 客户端管理
 
 ## 🗂 仓库导航
 
@@ -31,12 +32,12 @@
 |------|------|----------|
 | [**filescodebox**](https://github.com/filescodebox/filescodebox) | 🗂️ 装配仓（umbrella）：`make setup` 一键拉齐全部模块，统一构建/测试/部署 | [![tag](https://img.shields.io/github/v/tag/filescodebox/filescodebox)](https://github.com/filescodebox/filescodebox/tags) |
 | [contracts](https://github.com/filescodebox/contracts) | 📜 契约层：统一错误码 + Thrift 生成类型，纯类型零业务依赖 | [![tag](https://img.shields.io/github/v/tag/filescodebox/contracts)](https://github.com/filescodebox/contracts/tags) |
-| [core](https://github.com/filescodebox/core) | 🧠 业务核心库：10 个域服务 + OpenDAL 存储抽象 + `Bootstrap()` 库入口 | [![tag](https://img.shields.io/github/v/tag/filescodebox/core)](https://github.com/filescodebox/core/tags) |
+| [core](https://github.com/filescodebox/core) | 🧠 业务核心库：16 个域服务 + OpenDAL 多后端存储抽象 + `Bootstrap()` 库入口 | [![tag](https://img.shields.io/github/v/tag/filescodebox/core)](https://github.com/filescodebox/core/tags) |
 | [server](https://github.com/filescodebox/server) | 🚢 独立部署壳：薄壳入口 + Dockerfile，发布多架构镜像 | [![tag](https://img.shields.io/github/v/tag/filescodebox/server)](https://github.com/filescodebox/server/tags) |
 | [frontend](https://github.com/filescodebox/frontend) | 🎨 Web 前端：Vue3 + TS + Vite + Element Plus | `main` |
 | [desktop](https://github.com/filescodebox/desktop) | 🖥️ 桌面客户端：Tauri 2 托盘常驻，三平台安装包 | [![tag](https://img.shields.io/github/v/tag/filescodebox/desktop)](https://github.com/filescodebox/desktop/tags) |
 | [fnos](https://github.com/filescodebox/fnos) | 🐂 飞牛 fnOS 应用：fnpack 标准包，数据落 NAS 共享目录 | [![tag](https://img.shields.io/github/v/tag/filescodebox/fnos)](https://github.com/filescodebox/fnos/tags) |
-| [p2p](https://github.com/filescodebox/p2p) | 🕸️ P2P 联邦注册中心：节点租约注册 + 口令联邦路由 | [![tag](https://img.shields.io/github/v/tag/filescodebox/p2p)](https://github.com/filescodebox/p2p/tags) |
+| [p2p](https://github.com/filescodebox/p2p) | 🕸️ P2P 联邦注册中心：节点租约注册 + 口令联邦路由 + 设备直传信令 | [![tag](https://img.shields.io/github/v/tag/filescodebox/p2p)](https://github.com/filescodebox/p2p/tags) |
 | [kit](https://github.com/filescodebox/kit) | 🧰 共享 Go 工具库：28 个零生态依赖通用包（retry/syncx/shutdown/workflow 等） | [![tag](https://img.shields.io/github/v/tag/filescodebox/kit)](https://github.com/filescodebox/kit/tags) |
 | [charts](https://github.com/filescodebox/charts) | ☸️ Kubernetes Helm Chart：Pages + OCI 双发布 | [![tag](https://img.shields.io/github/v/tag/filescodebox/charts)](https://github.com/filescodebox/charts/tags) |
 
