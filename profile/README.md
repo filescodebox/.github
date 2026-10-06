@@ -21,7 +21,7 @@
 - 🔑 **匿名口令取件** — 寄件者拿口令、收件者凭码取件，阅后即焚，过期自动清理
 - 🗄️ **多存储后端** — OpenDAL 统一抽象，共 14 种热切换：本地磁盘 / S3(MinIO) / 阿里云 OSS / 腾讯云 COS / 百度 BOS / 金山 KS3 / 华为 OBS / WebDAV / FTP / SFTP / GCS / Azure Blob / HDFS / OneDrive
 - 🧩 **契约先行** — Thrift IDL 单一真相源 + 统一错误码；API 规范由后端运行时生成（`/openapi.json`）
-- 🚀 **多种交付形态** — Docker / docker-compose、Kubernetes（Helm Chart）、桌面客户端（Tauri 2 托盘常驻）、飞牛 fnOS 应用包、OpenWrt/iStoreOS ipk 包
+- 🚀 **多种交付形态** — Docker / docker-compose、Kubernetes（Helm Chart）、桌面客户端（Tauri 2 托盘常驻）、NAS 应用全家桶：飞牛 fnOS 应用包、OpenWrt/iStoreOS ipk、群晖 DSM 套件（SPK）、威联通 QTS 应用（QPKG）、绿联 UGOS Pro / 铁威马 TOS 部署包
 - 📊 **开箱可观测** — Prometheus `/metrics` 默认开启，OpenTelemetry 链路追踪可选
 - 🛡️ **治理内建** — API Token、上传类型/大小/频控、内容审核钩子、管理端站点配置（存库持久化，重启不丢）
 - 🕸️ **P2P 联邦 & 设备直传（可选）** — 多节点联邦互认取件；桌面客户端 p2pc 端到端加密直传；MCP 端点供 AI 客户端管理
@@ -38,6 +38,10 @@
 | [desktop](https://github.com/filescodebox/desktop) | 🖥️ 桌面客户端：Tauri 2 托盘常驻，三平台安装包 | [![tag](https://img.shields.io/github/v/tag/filescodebox/desktop)](https://github.com/filescodebox/desktop/tags) |
 | [fnos](https://github.com/filescodebox/fnos) | 🐂 飞牛 fnOS 应用：fnpack 标准包，数据落 NAS 共享目录 | [![tag](https://img.shields.io/github/v/tag/filescodebox/fnos)](https://github.com/filescodebox/fnos/tags) |
 | [openwrt](https://github.com/filescodebox/openwrt) | 📡 OpenWrt/iStoreOS 原生 ipk：procd 托管 + UCI 配置，路由器一键装 | [![tag](https://img.shields.io/github/v/tag/filescodebox/openwrt)](https://github.com/filescodebox/openwrt/tags) |
+| [synology](https://github.com/filescodebox/synology) | 📦 群晖 DSM 套件（SPK）：noarch 一键装，Container Manager 编排 | [![tag](https://img.shields.io/github/v/tag/filescodebox/synology)](https://github.com/filescodebox/synology/tags) |
+| [qnap](https://github.com/filescodebox/qnap) | 📦 威联通 QTS 应用（QPKG）：x86_64/arm_64，Container Station 编排 | [![tag](https://img.shields.io/github/v/tag/filescodebox/qnap)](https://github.com/filescodebox/qnap/tags) |
+| [ugreen](https://github.com/filescodebox/ugreen) | 📦 绿联 UGOS Pro 部署包：Docker 项目一键粘贴，含国内加速编排 | [![tag](https://img.shields.io/github/v/tag/filescodebox/ugreen)](https://github.com/filescodebox/ugreen/tags) |
+| [terramaster](https://github.com/filescodebox/terramaster) | 📦 铁威马 TOS 5/6/7 部署包：Docker Manager 项目导入 | [![tag](https://img.shields.io/github/v/tag/filescodebox/terramaster)](https://github.com/filescodebox/terramaster/tags) |
 | [p2p](https://github.com/filescodebox/p2p) | 🕸️ P2P 联邦注册中心：节点租约注册 + 口令联邦路由 + 设备直传信令 | [![tag](https://img.shields.io/github/v/tag/filescodebox/p2p)](https://github.com/filescodebox/p2p/tags) |
 | [kit](https://github.com/filescodebox/kit) | 🧰 共享 Go 工具库：28 个零生态依赖通用包（retry/syncx/shutdown/workflow 等） | [![tag](https://img.shields.io/github/v/tag/filescodebox/kit)](https://github.com/filescodebox/kit/tags) |
 | [charts](https://github.com/filescodebox/charts) | ☸️ Kubernetes Helm Chart：Pages + OCI 双发布 | [![tag](https://img.shields.io/github/v/tag/filescodebox/charts)](https://github.com/filescodebox/charts/tags) |
