@@ -1,6 +1,8 @@
 <div align="center">
 
-# 📦 PigeonBox · 文件快递柜
+<img src="https://raw.githubusercontent.com/pigeonbox/pigeonbox/main/docs/brand/logo.svg" width="112" alt="PigeonBox"/>
+
+# PigeonBox · 文件快递柜
 
 **像取快递一样分享文件。** Anonymous passcode sharing for text & files.
 
